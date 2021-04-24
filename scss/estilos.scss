@@ -1,0 +1,403 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+/*variable globales*/
+$color-titulos:rgb(11, 11, 95) ;
+$color-secundario:rgb(30, 112, 125);
+
+
+    body {
+
+         font-family: 'Source Code Pro', monospace;
+         width:100vw ;
+         height:100vh ;
+
+    }
+
+    /*HEADER*/
+
+header {
+
+    background: #159957;  
+    background: -webkit-linear-gradient(to right, #155799, #159957);  
+    background: linear-gradient(to right, #155799, #159957); 
+    
+  
+    width: 100vw;
+    padding-top: 1rem;  
+   
+      
+}
+
+@keyframes desplazarce {
+    0% {
+        
+        left: 0%;
+     }
+    100% {
+        left: 68%;
+    }
+}
+
+.logotipo {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+}
+
+.logotipo__imagen {
+
+  padding-right: 1rem;
+  width: 80px;
+  animation-name: desplazarce;
+  animation-duration: 3s;
+  animation-direction: reverse;
+  position: relative;
+  
+        
+}
+
+
+
+.logotipo h1 {
+    color: $color-titulos ;
+  
+    
+}
+
+/* navegador*/
+#nav {
+
+    width: 100vw;
+    padding-bottom: 1rem;
+   
+}
+
+
+
+/*footer*/
+
+footer {
+    background: #159957;  
+    background: -webkit-linear-gradient(to right, #155799, #159957);  
+    background: linear-gradient(to right, #155799, #159957);
+    
+    width: 100vw;
+    color:  rgb(11, 11, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+footer div a {
+    text-decoration: none;
+    flex-direction: row;
+    
+   
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------HOME-----------------------------------------------------*/
+    /*imagen del inicio*/
+/*
+.fondo {
+    background-image: url(../imagenes/home.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    font-family:'Signika Negative', sans-serif;
+    
+  
+    color: $color-titulos;
+
+   
+    
+}   
+
+
+.fondo {
+   
+    display:grid;
+    grid-template-columns: repeat( 7 ,1fr) ;
+    grid-template-rows: repeat( 5 , 1fr) ;
+    
+   
+}
+.fondo__titulo1 {
+
+    grid-row: 1 / 2;
+    grid-column: 2/ 7;
+    padding-top: 2rem;
+
+}
+
+.fondo__titulo2 {
+
+    grid-row: 2 / 3;
+    grid-column: 3/ 7;
+    
+   
+
+}
+
+.fondo__parrafo {
+    grid-row: 3 / 6;
+    grid-column: 5 / 7;
+    font-weight: bold;
+    
+
+  
+}
+*/
+.fondo{
+
+    &__contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+
+
+
+       &__centrado{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-secundario;
+}
+} 
+}
+ /*---------------------------------------------NOSOTROS-----------------------------------------------------*/ 
+ 
+.nosotros {
+    background: #8e9eab;  
+    background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  
+    background: linear-gradient(to top, #eef2f3, #8e9eab);
+    
+    color: $color-titulos;
+    font-family:'Signika Negative', sans-serif;
+   
+
+
+    
+    &__img {
+    width: 30rem;
+    height: 30rem;
+
+    
+ }
+
+}
+
+.card {
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/*---------------------------------------------SERVICIOS-----------------------------------------------------*/
+
+.servicios{ 
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100vw;
+    color: $color-titulos;
+    font-family:'Signika Negative', sans-serif;
+  
+    
+
+
+  &__img{
+
+    width: 30rem;
+    height: 20rem;
+
+  
+
+     
+        }
+            }
+
+  
+
+
+ /*---------------------------------------------CLIENTES-----------------------------------------------------*/   
+
+ .clientes {
+    
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100vw;
+    color: rgb(11, 11, 95);
+    font-family:'Signika Negative', sans-serif;
+    display:grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat( 6, 1fr);
+    align-content: space-between;
+   
+
+ }
+
+ .clientes__titulo {
+    padding-top: 1rem;
+    grid-row: 1 / 2 ;
+    grid-column: 1 / 7;
+    text-align: center;
+}
+
+@keyframes movimiento {
+     0% {  opacity: 0; }
+     25% { opacity: 0.1;}
+     50% {  opacity: 0.2;}
+     75% {  opacity: 0.3;}
+    100% { opacity: 0.4;}
+    
+}
+
+.clientes__1 {
+   
+    animation-name: movimiento;
+    animation-duration: 5s;
+    grid-row: 2 / 3 ;
+    grid-column: 2 / 3;
+   
+   
+    
+
+}
+
+.clientes__2 {
+   
+    animation-name: movimiento;
+    animation-duration: 5s;
+    grid-row: 2 / 3 ;
+    grid-column: 3 / 4;
+   
+}
+
+.clientes__3 {
+   
+    animation-name: movimiento;
+    animation-duration: 5s;
+    grid-row: 2 / 3 ;
+    grid-column: 4 / 5;
+    
+}
+
+.clientes__4 {
+   
+    animation-name: movimiento;
+    animation-duration: 5s;
+    grid-row: 2 / 3 ;
+    grid-column: 5 / 6;
+    
+}
+
+.clientes__5 {
+   
+    animation-name: movimiento;
+    animation-duration: 5s;
+    grid-row: 2 / 3 ;
+    grid-column: 6 / 7;
+  
+}   
+
+
+/*---------------------------------------------------------------contacto*---------------------------------------------------------------------------*/
+
+.contacto {
+    background: #8e9eab; 
+    background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  
+    background: linear-gradient(to top, #eef2f3, #8e9eab); 
+    width: 100vw;
+    height: 80vh;
+    color: rgb(11, 11, 95);
+    font-family:'Signika Negative', sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding:5% 20% 5% 20%;
+
+
+     &__seccion1 {
+     display: flex;
+     flex-direction: column;
+     align-items:center;
+     padding-left:6rem ;
+     padding-top: 2rem;
+
+     }
+    }
+
+
+.contacto__seccion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 3rem;
+ 
+
+    &__ h2 {
+    
+    transform: rotate(360deg);
+    transition-duration: 2s;
+    padding-bottom: 1rem;
+    
+    
+
+  
+    }
+        }  
+
+.form {
+
+    padding: 1%;
+ 
+    
+
+
+    &__input {
+
+    border-color: rgb(187, 187, 239);
+    border-radius: 5px;
+    border-style: inset;
+    padding:2px 30px;
+    text-align:center;
+
+}
+
+}
+
+.form1__boton {
+    background-color:rgb(11, 11, 95) ;
+    color: white;
+    border-radius: 5px;
+    border:none;
+    padding: 5px 10px;
+    margin-left: 14px;
+}
+
+
